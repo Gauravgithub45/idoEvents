@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 
+
 export default function EventsPage() {
   const [events, setEvents] = useState([])
 
@@ -61,7 +62,6 @@ export default function EventsPage() {
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {events.map((event) => (
           <div key={event.id} className="bg-white shadow-md rounded-lg p-4">
-            <img src={event.imageUrl} alt={event.title} className="w-full h-40 object-cover mb-2 rounded-md" />
             <h2 className="text-lg font-bold mb-2">{event.title}</h2>
             <p className="text-gray-600">{event.description}</p>
           </div>
